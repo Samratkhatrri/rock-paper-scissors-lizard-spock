@@ -26,20 +26,27 @@ while True:
 player = num
 computer = random.randint(1, 3)
 
-if (player == 1 and computer == 3):
+if player == 1:
     print("You chose: ✊")
-    print("CPU chose: ✌️")
-    print("The Player won!")
-elif (player == 3 and computer == 2):
-    print("You chose: ✌️")
-    print("CPU chose: ✋")
-    print("The Player won!")
-elif (player == 2 and computer == 3):
+elif player == 2:
     print("You chose: ✋")
-    print("CPU chose: ✌️")
+else:
+     print("You chose: ✌️")
+
+if computer == 1:
+    print("CPU chose: ✊")
+elif computer == 2:
+    print("CPU chose: ✋")
+else:
+     print("CPU chose: ✌️")
+    
+      
+    
+# The results 
+if (player == 1 and computer == 3) or (player == 3 and computer == 2) or (player == 2 and computer == 1):
     print("The Player won!")
-elif( player == computer):
-    print("Its a Tie!")
+elif (player ==computer):
+    print("Its a tie!")
 else:
     print("The computer won!")   
 
